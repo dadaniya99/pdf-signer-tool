@@ -25,7 +25,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --windowed --name "PDF签名工具" --add-data "src/resources;resources" src/app.py
+          pyinstaller --onefile --windowed --name "PDF签名工具" src/app.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
