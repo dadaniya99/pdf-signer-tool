@@ -16,7 +16,10 @@
 
 ### 方式 1：直接下载 .exe（推荐）
 
-前往 [Releases](../../releases) 下载最新版本的 .exe 文件，双击运行即可。
+- **发布页（可看到 Assets）**：https://github.com/dadaniya99/pdf-signer-tool/releases/tag/v7.5
+- **直接下载 EXE**：https://github.com/dadaniya99/pdf-signer-tool/releases/download/v7.5/PDF.exe
+
+点开发布页后，在 **Assets** 里也能下载。
 
 ### 方式 2：从源码运行
 
