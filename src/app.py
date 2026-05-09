@@ -4,7 +4,12 @@ import sys
 import tempfile
 
 # 确保项目根目录在 sys.path 中（支持直接 python src/app.py 运行）
-_project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# PyInstaller 打包后，需要特殊处理
+if getattr(sys, 'frozen', False):
+    # 打包后的 EXE 运行环境，_MEIPASS 是提取目录
+    _project_root = getattr(sys, '_MEIPASS', os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+else:
+    _project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 from PyQt6.QtWidgets import (
